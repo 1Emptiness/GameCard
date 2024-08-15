@@ -182,8 +182,8 @@ root.title("Программа для координат и расстояний
 root.geometry("300x200")
 
 # Кнопки для выбора режима
-tk.Button(root, text="Узнать координаты", command=lambda: select_mode("coordinates")).pack(pady=10)
-tk.Button(root, text="Измерить расстояние", command=lambda: select_mode("distance")).pack(pady=10)
+tk.Button(root, text="Узнать координаты / CTRL+a", command=lambda: select_mode("coordinates")).pack(pady=10)
+tk.Button(root, text="Измерить расстояние / CTRL+s", command=lambda: select_mode("distance")).pack(pady=10)
 tk.Button(root, text="Просмотр координат", command=show_coordinates).pack(pady=10)
 tk.Button(root, text="Сохраненные длины", command=show_distances).pack(pady=10)
 
@@ -195,3 +195,5 @@ kb.add_hotkey('ctrl+a', lambda: select_mode("coordinates"))
 kb.add_hotkey('ctrl+s', lambda: select_mode("distance"))
 
 root.mainloop()
+
+
